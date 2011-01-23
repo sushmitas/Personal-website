@@ -1,3 +1,4 @@
+
 <a name="top"></a>
 <hr class="space">
 
@@ -31,17 +32,49 @@
 
 
 	
-	<div class="span-22 last">
-		<span class="label">Media</span><br /><br />
+<div class="span-22 last">
+	<span class="label">Media</span><br /><br />
+	<div id="media">
+	
 		<% unless @project.images.empty? %>
+			
 			<ul>
-			<%= render @images %>
-			</ul>
+			<% @images.each do |image| %>
+				<% image_file_name = image.filename %>
+				<li>
+					<%projectThumbImagePath = "projects/defaultImages/ThumbImage.png" %>
+					<%	projectThumbImagePath = "projects/#{@project.imgs_folder_name}/imgthumbs/#{image_file_name}" if not @project.imgs_folder_name.blank? %>
+					
+					<% if image == @image %>
+						<%= link_to image_tag(projectThumbImagePath, :alt => image_file_name,
+										:class => "proj_sel_thumb_img", :title => image_file_name),
+										 "/images/projects/#{@project.imgs_folder_name}/#{image_file_name}" %>
+						<%= render @images %>
+					<% else %>
+						<%= link_to image_tag(projectThumbImagePath, :alt => image_file_name,
+										:class => "proj_thumb_img", :title => image_file_name),
+										"/images/projects/#{@project.imgs_folder_name}/#{image_file_name}",
+										:class => "activelink" %>
+					<% end %>
+				</li>
+			<% end %>
+		</ul>
+		<div id="placeholder">
+
+			<% unless @images.empty? %>
+				<%= image_tag("/images/projects/#{@project.imgs_folder_name}/#{@images.first.filename}") %>
+			<% end %>
+		</div>
 		<% end %>
+	
+	</div>
 	</div>
 	<a href="#top">Back to top</a>
 </div>
 
+
+
+<%#------------------------Project Nav----------------------------%>
 <div class="span-2 last">
 	<span class="label" style="text-align:right">Projects</span>
 	<div id="projectnav">

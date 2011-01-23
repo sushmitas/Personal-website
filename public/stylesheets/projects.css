@@ -8,7 +8,7 @@
 }
 
 
-/* Projects list */
+/* Projects nav */
 #projectnav{
 	text-align: center;
 }
@@ -63,4 +63,51 @@
 .desc_form_text {width:800px;height:250px;padding:5px;}
 .capt_form_text {width:400px;height:70px;padding:5px;}ont-size: 1.2em;
 	margin-left: 0;
+}
+
+/* Media */
+#media{
+	 padding: 0 0 0 0;
+}
+#media ul{
+	padding: 0;
+}
+#media ul li{
+	list-style-type: none;
+  display: inline-block;
+  border: solid 1px #888;
+
+}
+
+.mainimage{
+	border: solid 1px #888;
+}
+
+
+/* Project index page */
+#project_list{
+	padding: 0;
+}
+
+#project_list ul{
+	padding: 0;
+}
+
+#project_list ul li{
+	list-style-type: none;
+	display: inline-block;
+
+	width: 300px;
+	margin: 0 5px 20px 0;
+	vertical-align: top;
+}
+
+.project_list_img{
+	border: solid 1px #888;
+}
+
+.project_list_title{
+	font-size: 1.5em;
+	text-align: center;
+	color: #333;
 }
