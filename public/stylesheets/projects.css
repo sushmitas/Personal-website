@@ -1,0 +1,66 @@
+/* Stylesheet for projects pages */
+
+#project {
+	font-family: Gill Sans, Tahoma, Geneva, sans-serif;
+	font-size: 1em;
+	line-height:1;
+	color:#656669;
+}
+
+
+/* Projects list */
+#projectnav{
+	text-align: center;
+}
+
+#projectnav ul{
+	margin: 0 0;
+	padding: 0;
+}
+
+#projectnav ul li{
+	list-style-type: none;
+}
+
+#projectnav li a, #projectnav li a:visited{
+	margin: 0 0;
+	text-decoration:none;
+	color: #252628;
+}
+
+.thumb_proj_img {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	border: 1px solid #333;
+}
+
+.sel_thumb_proj_img {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	border: 3px solid #333;
+}
+
+/* Project area */
+#project_area{
+	margin: 0 0;
+}
+
+.project_title{
+	font-size: 1.5em;
+	line-height: 1;
+}
+
+.project_logo{
+	margin-bottom: 15px;
+	border: 1px solid #333;
+}
+
+.project_text{
+	margin-left: 10px;
+}
+
+/* Project editing form */
+.desc_form_text {width:800px;height:250px;padding:5px;}
+.capt_form_text {width:400px;height:70px;padding:5px;}ont-size: 1.2em;
+	margin-left: 0;
+}

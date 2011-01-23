@@ -1,0 +1,70 @@
+<a name="top"></a>
+<hr class="space">
+
+<div class="span-24 last project">
+
+<div id="project_area" class="span-22">
+
+  <div class="span-22 last">
+	<%# if administrative user is logged in, display edit/delete link %>
+	<% if current_user and current_user.admin? %>
+	<span class="project_title"><%= @project.name %></span>
+		<span class="editlink">
+			<%= link_to "edit/delete", edit_project_path(@project), 
+						:title => "Edit " + @project.name %>
+		</span><br />
+	<% else %>
+	<div class="project_title"><%= @project.name %></div>
+	<% end %>
+	<%= @project.proj_beg_date.strftime("%b %Y - ") if @project.proj_beg_date %>
+	<%= @project.proj_end_date.strftime("%b %Y") if @project.proj_end_date %>
+	</div>
+
+	<hr class="space">
+
+	<div class="span-22 last">
+		<%=raw @project.description %><br />
+	</div>
+
+
+<%#------------------------Media ---------------------------------%>
+
+
+	
+	<div class="span-22 last">
+		<span class="label">Media</span><br /><br />
+		<% unless @project.images.empty? %>
+			<ul>
+			<%= render @images %>
+			</ul>
+		<% end %>
+	</div>
+	<a href="#top">Back to top</a>
+</div>
+
+<div class="span-2 last">
+	<span class="label" style="text-align:right">Projects</span>
+	<div id="projectnav">
+		<ul>
+			<% @projects.each do |project| %>
+				<li>
+					<%	thumbImagePath = "projects/defaultImages/ThumbImage.png" %>
+					<%	thumbImagePath = "projects/#{project.imgs_folder_name}/thumb.png" if not project.imgs_folder_name.blank? %>
+					<% if project == @project %>
+						<%= link_to image_tag(thumbImagePath, :alt => project.name,
+										:class => "sel_thumb_proj_img", :title => project.name),
+										 project %>
+					<% else %>
+						<%= link_to image_tag(thumbImagePath, :alt => project.name,
+										:class => "thumb_proj_img", :title => project.name),
+										project, :class => "activelink" %>
+					<% end %>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+</div>
+
+</div>
+
+<hr class="space">

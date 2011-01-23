@@ -1,0 +1,52 @@
+a.sectionheading {
+	font-size: 1.5em;
+	line-height: 1;
+	border-bottom: 0px dotted #CCC;
+	color: #144955;
+}
+
+
+.section {
+/*	border-left: 1px dotted #CCC;
+	padding-left:10px;*/
+}
+
+.shortcuts{
+	 text-align:right;
+	 padding: 0 14px 0 0;
+}
+
+.shortcuts a{
+	color: #333;
+}
+
+.emphasis {
+	font-size:1.3em;
+	line-height:1;
+}
+
+.alignright {
+	text-align: right;
+}
+
+.description{
+	margin-bottom: 30px;
+}
+
+ul {
+	margin: 0;
+}
+
+.nobullet{
+	margin: 0;
+	padding: 0;
+}
+
+.nobullet li{
+  list-style-type: none;
+  padding: 0;
+}
+
+.margintop{
+	margin-top:18px;
+}

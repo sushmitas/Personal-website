@@ -1,0 +1,172 @@
+/* General page setup */
+
+body {
+  background: #fff;
+  color: #333;
+}
+
+/* Header */
+
+#header{
+	padding-top: 20px;
+	margin-bottom: 10px;
+	border-bottom:1px solid #333;
+}
+
+#logo{
+	font-size: 1.5em;
+}
+
+#logo a{
+	color:#333;
+}
+
+#logo a.selected{
+	color:#339966;
+}
+
+/* Footer */
+#footer{
+	border-top:1px solid #333;
+	padding-top: 5px;
+	/*vertical-align: text-top;*/
+}
+
+.licenseimg{
+	float: left;
+	margin-right: 5px;
+}
+
+.licensetext{
+	float: left;
+	width: 450px;
+	font-size: .8em;
+}
+
+.center{
+	text-align: center;
+}
+
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:visited {
+  
+}
+
+/* Navigation */
+#nav {
+  white-space: nowrap;
+	
+}
+
+
+#nav ul {
+	float: right;
+  margin: 0;
+  padding: 0 14px 0 0;
+}
+
+#nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0 0 0 10px;
+}
+
+#nav ul li a {
+  margin: 0 0 0 20px;
+  font-size: 1.3em;
+  color: #333;
+}
+
+#nav ul li a:visited {
+}
+
+#nav ul li a:hover {
+  text-decoration: none;
+	color: #339966;
+}
+
+#nav ul li a.selected{
+	color: #339966;
+	font-weight: bold;
+}
+
+.selected {
+	/*border-bottom: 2px solid #666;*/
+	color: #06c;
+	font-weight: bold;
+}
+
+
+
+.sushmita_photo {
+	border: 1px solid #666;
+}
+
+/* Page heading */
+.pageheading {
+	font-size: 1.8em;
+	margin-bottom: 5px;
+}
+
+.pageheading a, .pageheading a:visited {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+/* Error handling on new user form */
+.field_with_errors {
+  margin-top: 10px;
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+.field_with_errors label {
+  color: #fff;
+}
+
+#error_explanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+
+.label{
+	font-size: 1.1em;
+	font-weight: bold;
+}

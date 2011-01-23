@@ -1,0 +1,16 @@
+<div id="footer" class="span-24 last">
+	<div class="span-21">
+		
+		<span class="licensetext">This site and its content copyright © 2011 by 
+		Sushmita Subramanian. All rights reserved. </span>
+	</div>
+
+	<div class="span-3 last">
+    <% if signed_in? %>
+    <%= link_to "Sign out", signout_path, :method => :delete, :class => "right" %>
+    <% else %>
+    <%= link_to "Sign in", signin_path, :class => "right" %>
+    <% end %>
+	</div>
+	
+</div>

@@ -1,0 +1,63 @@
+.intro {
+	margin: 50px 0 0 0;
+	font-size: 1.1em;
+}
+
+.intro a{
+	text-decoration: none;
+	color: #339966;
+}
+
+.sushmitacartoonimg{
+
+}
+
+.introemphasis {
+	/*color: #283; */
+	color: #144955;
+	font-weight: bold;
+	font-size:1.2em;
+	line-height:1;
+}
+
+/* Frame pictures */
+#frame{
+	text-align: right;
+}
+
+#frame ul{
+	margin: 0;
+	padding: 0;
+}
+#frame ul li{
+	list-style-type: none;
+  display: inline-block;
+  padding: 0 0 0 10px;
+}
+
+
+
+
+
+
+/* For featured project */
+.list_proj_img {
+	margin: 0 0 0 0;
+	border: 3px solid #CCC;
+}
+
+.list_proj_img:hover{
+	border: 3px solid #666;
+}
+
+.list_proj_name {
+	font-size: 1.3em;
+}
+
+.list_proj_desc {
+}
+
+.viewlink {
+	text-align: right;
+	text-decoration: underline;
+}

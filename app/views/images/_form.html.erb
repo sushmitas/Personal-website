@@ -1,0 +1,31 @@
+<%= form.fields_for :images do |img_form| %>
+	<div class="span-24 last">
+		<div class="field span-8">
+			<%= img_form.label :filename %><br />
+			<%= img_form.text_field :filename %><br />
+			<% unless img_form.object.nil? || img_form.object.new_record? %>
+			<div class="field span-4">
+				<%= img_form.check_box :_destroy %>
+				<%= img_form.label :_destroy, 'Remove'%>
+			</div>
+			<% end %>
+			<div class="field span-4 last">
+				<%= img_form.select :mediatype, 
+							{"" => nil, "Image" => 0, 'Video' => 1} %>
+				<%= img_form.label :mediatype %>
+			</div>
+
+		</div>
+	
+		<div class="field span-10">
+			<%= img_form.label :caption %><br />
+			<%= img_form.text_area :caption, :class => "capt_form_text" %>
+		</div>
+	
+		<div class="span-6 last">
+			<div class="field">
+				
+			</div>
+		</div>
+	</div>
+<% end %>

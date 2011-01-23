@@ -1,0 +1,35 @@
+<h1>Add new personal project</h1>
+
+<div class="span-24 last personalform">
+	<%= form_for(@personal) do |pers_form| %>
+		<%= render 'shared/error_messages', :object => pers_form.object %>
+		<div class="field">
+			<%= pers_form.label :name %><br />
+			<%= pers_form.text_field :name %>
+		</div>
+		
+		<div class="field">
+			<%= pers_form.label :description %><br />
+			<%= pers_form.text_field :description %>
+		</div>
+	
+		<div class="field">
+			<%= pers_form.label :imgs_folder_name, "Images folder name" %><br />
+			<%= pers_form.text_field :imgs_folder_name %>
+		</div>
+	
+		
+		<hr class="space"
+		<h5>Project images</h5>
+		<%#build some new image entries so that it is possible to add images %>
+		<%= render :partial => 'images/form',
+								:locals => {:form => pers_form} %>
+	
+		<div class="actions">
+			<%= pers_form.submit "Create project" %>
+		</div>
+	<% end %>
+
+</div>
+
+<%= link_to 'Back', personals_path %>

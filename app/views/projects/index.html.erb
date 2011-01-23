@@ -1,0 +1,29 @@
+<hr class="space">
+
+
+
+<div id="project_list" class="span-20 last">
+	<ul>
+		<% @projects.each do |project| %>
+			<li>
+				<% projImagePath = "projects/defaultImages/IndexImage.png" %>
+				<% projImagePath = "projects/#{project.imgs_folder_name}/index.png" if not project.imgs_folder_name.blank? %>
+				<%= link_to image_tag(projImagePath, :alt => project.name,
+								:class => "list_proj_img", :title => "View " + project.name),
+								project %>
+				<%= link_to project.name, project, :title => "View " + project.name, 
+								:class => "list_proj_name" %>
+				<% unless project.short_description.empty? %>
+					<br /><%= project.short_description %>
+				<% end %>
+				<%# if administrative user is logged in, display edit/delete link %>
+				<% if current_user and current_user.admin? %>
+				<div class="editlink">
+					<%= link_to "edit/delete", edit_project_path(project), 
+								:title => "Edit " + project.name %>
+				</div>
+				<% end %>
+			</li>
+		<% end %>
+	</ul>
+</div>

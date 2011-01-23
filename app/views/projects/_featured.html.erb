@@ -1,0 +1,22 @@
+<div class="span-11 last">
+	<% featproject = Project.find(6) %>
+	<% if featproject %>
+	<div class="label">Featured project</div>
+	<div class="span-6">
+	<% projImagePath = "projects/defaultImages/IndexImage.png" %>
+	<% projImagePath = "projects/#{featproject.imgs_folder_name}/index.png" if not featproject.imgs_folder_name.blank? %>
+	<%= link_to image_tag(projImagePath, :alt => featproject.name,
+					:class => "list_proj_img", :title => "View " + featproject.name),
+					featproject %>
+	</div>
+	<div class="span-5 last">
+		<%= link_to featproject.name, featproject, :title => "View " + featproject.name, :class => "list_proj_name" %>
+	
+		<% unless featproject.short_description.empty? %>
+			<span class="list_proj_desc"><%= featproject.short_description %></span>
+		<% end %>
+		
+		<div class="viewlink"><%= link_to "View project", featproject, :title => "View " + featproject.name %></div>
+	</div>
+	<% end %>
+</div>

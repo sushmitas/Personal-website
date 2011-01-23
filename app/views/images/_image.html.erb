@@ -1,0 +1,13 @@
+<li>
+	<% if image.mediatype == 0 %>
+	<% imagepath = path_to_image("projects/#{@project.imgs_folder_name}/#{image.filename}") %>
+	<%= image_tag(imagepath, :alt => @project.name,
+									:class => "proj_img", :title => @project.name) %>
+	<% elsif image.mediatype == 1 %>
+	<% videopath = path_to_video("projects/#{@project.imgs_folder_name}/
+			#{image.filename}") %>
+	<%= video_tag(videopath) %>
+	<% end %>
+	<div class="proj_img_caption span-18 last"><%= image.caption %></div>
+	<hr>
+</li>

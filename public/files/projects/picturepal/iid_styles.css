@@ -1,0 +1,47 @@
+
+.main_nav  { color: #000000; font-size: 13px; font-family: Verdana, "Trebuchet MS", Courier; text-align: left }
+.main_nav_active { color: #3f3d3e; font-size: 13px; font-family: Verdana, "Trebuchet MS", Courier; text-align: left }
+
+.sub_nav { color: #999; font-size: 11px; font-family: "Trebuchet MS"; text-align: left }
+.sub_nav_num  { color: #f30; font-size: 11px; font-family: Verdana; text-align: left; padding-bottom: 12px }
+
+.side_nav  { color: #000000; font-size: 11px; font-family: Verdana; text-align: left; padding-bottom: 12px }
+.side_nav_active  { color: #3f3d3e; font-size: 11px; font-family: Verdana; text-align: left; padding-bottom: 12px }
+
+.page_title { font-size: 30px; font-family: Verdana; color:#FFFFFF;}
+.subpage_title {font-size: 20px; font-family: Verdana; font-style:italic; color:#FFFFFF;}
+
+.page_details { color: #666; font-size: 11px; font-family: Verdana }
+
+h1 { font-size: 20pt; font-family: Verdana; font-weight: normal; margin: 12px 0 13px 20px }
+h2 { font-size: 20pt; font-family: Verdana; font-weight: normal; margin: 12px 0 0 20px }
+h3 { color: #f3951b; font-size: 11pt; font-family: Verdana; font-weight: bold; margin: 10px 0 0 20px }
+h4 { color: #000; font-size: 10pt; font-family: Verdana; font-weight: bold; margin: 0 0 12px 20px }
+h5 { color: #000; font-size: 10pt; font-family: Verdana; font-weight: bold; margin: 12px 0 12px 20px }
+
+.text_highlight { font-size: 12pt; font-family: Verdana; font-style: italic }
+
+p { font-size: 10pt; font-family: "Trebuchet MS"; margin-right: 20px; margin-left: 20px }
+.credits { color: #f3951b; font-size: 10pt; font-family: Verdana; text-align: left; font-weight:200 }
+.template_note { font-size: 9pt; font-family: Verdana; font-style: italic }
+
+a:link  { color: #ff4500; font-weight:bold; text-decoration: none }
+a:visited { color: #ff4500; font-weight:bold; text-decoration: none }
+a:active { color: #ff4500; font-weight:bold; text-decoration: none }
+a:hover { color: #f3951b; text-decoration: none }
+
+ul { font-size: 10pt; font-family: "Trebuchet MS"; list-style-type: disc; margin: 1em 0 1em 40px }
+ol { font-size: 10pt; font-family: "Trebuchet MS"; list-style-type: disc; margin: 1em 0 1em 40px }
+
+#body {
+	font-size:10pt; font-family: "Trebuchet MS";
+	background-color:#FFFFFF;
+	}
+
+#leftBox {
+	background-color:#000000;
+	}
+	
+#topBox {
+	background-color:#f3951b;
+	}

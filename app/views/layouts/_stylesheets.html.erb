@@ -1,0 +1,18 @@
+
+<%= stylesheet_link_tag 'blueprint/screen', :media => 'screen, projection' %>
+<%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+<!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie', :media => 'screen, projection' %><![endif]-->
+
+<%= stylesheet_link_tag 'custom', :media => 'all' %>
+<% if params[:controller] == 'projects' %>
+<%= stylesheet_link_tag 'projects', :media => 'all' %>
+<% end %>
+<% if @title == 'Resume' %>
+<%= stylesheet_link_tag 'resume', :media => 'all' %>
+<% end %>
+<% if @title == 'About' %>
+<%= stylesheet_link_tag 'about', :media => 'all' %>
+<% end %>
+<% if @title == 'Home' %>
+<%= stylesheet_link_tag 'home', :media => 'all' %>
+<% end %>

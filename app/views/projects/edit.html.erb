@@ -1,0 +1,60 @@
+<h2>Edit: <%= @project.name %></h2>
+
+<div class="span-24 last projectform">
+	<%= form_for(@project) do |proj_form| %>
+		<%= render 'shared/error_messages', :object => proj_form.object %>
+		<div class="field">
+			<%= proj_form.label :name %><br />
+			<%= proj_form.text_field :name %>
+		</div>
+		
+		<div class="field">
+			<%= proj_form.label :proj_beg_date, "Project begin date" %><br />
+			<%= proj_form.date_select :proj_beg_date, :discard_day => true, :include_blank => true, :start_year => Time.now.year, :end_year => Time.now.year - 50, :order => [:month, :year] %>
+		</div>
+		
+		<div class="field">
+			<%= proj_form.label :proj_end_date, "Project end date (use end if only one date)" %><br />
+			<%= proj_form.date_select :proj_end_date, :discard_day => true, :include_blank => true, :start_year => Time.now.year, :end_year => Time.now.year - 50, :order => [:month, :year] %>
+		</div>
+	
+		<div class="field">
+			<%= proj_form.label :short_description %><br />
+			<%= proj_form.text_field :short_description %>
+		</div>
+	
+		<div class="field">
+			<%= proj_form.label :imgs_folder_name, "Images folder name" %><br />
+			<%= proj_form.text_field :imgs_folder_name %>
+		</div>
+	
+		<div class="field span-24 last">
+			<%= proj_form.label :description %><br />
+			<%= proj_form.text_area :description, :class => "desc_form_text" %>
+		</div>
+		
+		<div class="actions">
+			<%= proj_form.submit "Update project" %>
+		</div>
+		
+		<hr class="space">
+		<h5>Add/Modify Project images</h5>
+		<%#build some new image entries so that it is possible to add images %>
+		<% @project.images.build %>
+		<% @project.images.build %>
+		<% @project.images.build %>
+		<%= render :partial => 'images/form',
+								:locals => {:form => proj_form} %>
+	
+		<div class="actions">
+			<%= proj_form.submit "Update project" %>
+		</div>
+	<% end %>
+		
+	<p><br />
+	<%= link_to "Delete project", @project, :method => :delete, 
+												:confirm => "Really delete '#{@project.name}'?",
+												:title => "Delete #{@project.name}" %>
+	</p>
+
+</div>

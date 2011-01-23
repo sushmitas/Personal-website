@@ -1,0 +1,36 @@
+<div id="header" class="span-24 last">
+	<div id="logo" class="span-8">
+	<% if @menuselect == "Home" %><%= link_to "Sushmita Subramanian", root_path, :class => "selected" %>
+	<% else %><%= link_to "Sushmita Subramanian", root_path %>
+	<% end %>
+	</div>
+	<div id="nav" class="span-16 last">
+		<ul>
+			<% if @menuselect == "Projects" %>
+			<li><%= link_to "design", projects_path, :class => "selected" %></li>
+			<% else %>
+			<li><%= link_to "design", projects_path %></li>
+			<% end %>
+
+			<% if @menuselect == "Personal" %>
+			<li><%= link_to "personal", personals_path, :class => "selected" %></li>
+			<% else %>
+			<li><%= link_to "personal", personals_path %></li>
+			<% end %>
+			
+			<% if @menuselect == "Resume" %>
+			<li><%= link_to "resume", resume_path, :class => "selected" %></li>
+			<% else %>
+			<li><%= link_to "resume", resume_path %></li>
+			<% end %>
+			
+			<% if @menuselect == "About" %>
+			<li><%= link_to "about", about_path, :class => "selected" %></li>
+			<% else %>
+			<li><%= link_to "about", about_path %></li>
+			<% end %>
+			
+			
+		</ul>
+	</div>
+</div>
