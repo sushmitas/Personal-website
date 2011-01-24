@@ -79,9 +79,18 @@
 
 }
 
+.project_sel_thumb_img a img{
+	border: solid 1px #333;
+}
+
 .mainimage{
 	border: solid 1px #888;
 }
+
+#caption{
+	font-weight: bold;
+}
+
 
 
 /* Project index page */
@@ -97,8 +106,8 @@
 	list-style-type: none;
 	display: inline-block;
 
-	width: 300px;
-	margin: 0 5px 20px 0;
+	width: 210px;
+	margin: 0 20px 20px 0;
 	vertical-align: top;
 }
 
@@ -108,6 +117,13 @@
 
 .project_list_title{
 	font-size: 1.5em;
-	text-align: center;
+	color: #333;
+}
+
+a.project_list_title:hover {
+	color: #339966
+}
+
+a.editlink{
 	color: #333;
 }

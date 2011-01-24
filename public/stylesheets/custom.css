@@ -25,6 +25,10 @@ body {
 	color:#339966;
 }
 
+#logo a.hover{
+	color:#339966;
+}
+
 /* Footer */
 #footer{
 	border-top:1px solid #333;
@@ -67,7 +71,6 @@ a:visited {
 	
 }
 
-
 #nav ul {
 	float: right;
   margin: 0;
@@ -77,11 +80,10 @@ a:visited {
 #nav ul li {
   list-style-type: none;
   display: inline-block;
-  padding: 0 0 0 10px;
+  padding: 0 0 0 40px;
 }
 
 #nav ul li a {
-  margin: 0 0 0 20px;
   font-size: 1.3em;
   color: #333;
 }

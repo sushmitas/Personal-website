@@ -7,7 +7,7 @@
 		<% @projects.each do |project| %>
 			<li>
 				<% projImagePath = "projects/defaultImages/IndexImage.png" %>
-				<% projImagePath = "projects/#{project.imgs_folder_name}/LogoImage.png" if not project.imgs_folder_name.blank? %>
+				<% projImagePath = "projects/#{project.imgs_folder_name}/FrontImage.png" if not project.imgs_folder_name.blank? %>
 				
 				<%= link_to image_tag(projImagePath, :alt => project.name,
 								:class => "project_list_img", :title => "View " + project.name),

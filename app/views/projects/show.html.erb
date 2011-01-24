@@ -33,7 +33,7 @@
 
 	
 <div class="span-22 last">
-	<span class="label">Media</span><br /><br />
+	<span class="label">Images:</span><br />
 	<div id="media">
 	
 		<% unless @project.images.empty? %>
@@ -45,24 +45,28 @@
 					<%projectThumbImagePath = "projects/defaultImages/ThumbImage.png" %>
 					<%	projectThumbImagePath = "projects/#{@project.imgs_folder_name}/imgthumbs/#{image_file_name}" if not @project.imgs_folder_name.blank? %>
 					
-					<% if image == @image %>
-						<%= link_to image_tag(projectThumbImagePath, :alt => image_file_name,
+					<% if image == @images.first %>
+						<%= link_to image_tag(projectThumbImagePath, 
 										:class => "proj_sel_thumb_img", :title => image_file_name),
-										 "/images/projects/#{@project.imgs_folder_name}/#{image_file_name}" %>
-						<%= render @images %>
+										 "/images/projects/#{@project.imgs_folder_name}/#{image_file_name}", 
+										 :alt => "#{image.caption}" %>
+						
 					<% else %>
-						<%= link_to image_tag(projectThumbImagePath, :alt => image_file_name,
+						
+						<%= link_to image_tag(projectThumbImagePath,
 										:class => "proj_thumb_img", :title => image_file_name),
 										"/images/projects/#{@project.imgs_folder_name}/#{image_file_name}",
-										:class => "activelink" %>
+										:class => "activelink", :alt => "#{image.caption}" %>
 					<% end %>
 				</li>
 			<% end %>
 		</ul>
 		<div id="placeholder">
-
+			
 			<% unless @images.empty? %>
-				<%= image_tag("/images/projects/#{@project.imgs_folder_name}/#{@images.first.filename}") %>
+				<div id="caption"><%= @images.first.caption %></div>
+				<%= image_tag("/images/projects/#{@project.imgs_folder_name}/#{@images.first.filename}", 
+				:class => "mainimage") %>
 			<% end %>
 		</div>
 		<% end %>
