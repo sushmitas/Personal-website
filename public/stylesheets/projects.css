@@ -77,6 +77,8 @@
 #media ul li{
 	list-style-type: none;
   display: inline-block;
+  zoom:1;
+  *display:inline;
   border: solid 1px #888;
 
 }
@@ -107,6 +109,8 @@
 #project_list ul li{
 	list-style-type: none;
 	display: inline-block;
+	zoom:1;
+	*display:inline;
 
 	width: 210px;
 	margin: 0 20px 20px 0;
