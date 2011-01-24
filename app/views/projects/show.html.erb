@@ -34,10 +34,11 @@
 
 <div class="span-22 last">
 <br />	
+<% unless @project.images.empty? %>
 	<span class="label">Images:</span><br />
 	<div id="media">
 	
-		<% unless @project.images.empty? %>
+		<%# unless @project.images.empty? %>
 			
 			<ul>
 			<% @images.each do |image| %>
@@ -70,11 +71,12 @@
 				:class => "mainimage") %>
 			<% end %>
 		</div>
-		<% end %>
-	
-	</div>
-	</div>
+		<%# end %>
 	<a href="#top">Back to top</a>
+	</div><% end %>
+	</div>
+	
+	
 </div>
 
 

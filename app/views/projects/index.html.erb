@@ -15,7 +15,7 @@
 				<%= link_to project.name, project, :title => "View " + project.name, 
 								:class => "project_list_title" %>
 				<% unless project.short_description.empty? %>
-					<br /><%= project.short_description %>
+					<br /><span class="project_list_description"><%= project.short_description %></span>
 				<% end %>
 				<%# if administrative user is logged in, display edit/delete link %>
 				<% if current_user and current_user.admin? %>

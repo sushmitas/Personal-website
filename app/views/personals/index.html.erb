@@ -1,25 +1,5 @@
-<h1>Listing personals</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @personals.each do |personal| %>
-  <tr>
-    <td><%= personal.name %></td>
-    <td><%= personal.description %></td>
-    <td><%= link_to 'Show', personal %></td>
-    <td><%= link_to 'Edit', edit_personal_path(personal) %></td>
-    <td><%= link_to 'Destroy', personal, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Personal', new_personal_path %>
+<% artImagePath = "personal/flowerpainting/painting2.png" %>
+<div class="span-20">
+<%= image_tag(artImagePath, :class => "tempImage") %>
+</div>

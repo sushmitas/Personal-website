@@ -14,10 +14,14 @@ a.sectionheading {
 .shortcuts{
 	 text-align:right;
 	 padding: 0 14px 0 0;
+	 color:#444;
 }
 
 .shortcuts a{
-	color: #333;
+	color: #444;
+}
+.shortcuts a:hover{
+	color: #339966;
 }
 
 .emphasis {
