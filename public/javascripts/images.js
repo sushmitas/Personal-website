@@ -11,8 +11,8 @@ var placeholder = gallery.find("#placeholder img");
     //    $(this).attr("src", href).fadeIn("fast");
 		
 		//$('#caption').replaceWith('<div id=' + $(this).attr("alt") + '</div>');
-		alert(this);
-  //  $('#caption').text(this.alt);
+		
+    $('#caption').text(this.getAttribute("alt"));
     return false;
 });
 });
