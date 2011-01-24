@@ -130,10 +130,37 @@
 .project_list_description{
 	color: #333;
 }
-.editlink a{
-	color: #555;
+
+.editlink a, .editlink a:visited, a.editlink{
+	color: #333;
+	text-decoration: underline;
 }
 
-.editlink a:hover{
+.editlink a:hover, a:hover.editlink{
 	color: #339966;
+	text-decoration:underline;
+}
+
+.label{
+	text-align:left;
+}
+
+.projectnav_label{
+	text-align:center;
+	font-weight:bold;
+	font-size: 1.1em;
+}
+
+.margintop{
+	margin-top: 20px;
+}
+
+a, a:visited{
+	color: #333;
+	text-decoration: underline;
+}
+
+a:hover{
+	color:#339966;
+	text-decoration:underline;
 }

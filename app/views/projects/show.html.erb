@@ -72,7 +72,7 @@
 			<% end %>
 		</div>
 		<%# end %>
-	<a href="#top">Back to top</a>
+	<a href="#top" class="editlink">Back to top</a>
 	</div><% end %>
 	</div>
 	
@@ -83,7 +83,7 @@
 
 <%#------------------------Project Nav----------------------------%>
 <div class="span-2 last">
-	<span class="label" style="text-align:right">Projects</span>
+	<div class="projectnav_label"><%= link_to "Projects", projects_path %></div>
 	<div id="projectnav">
 		<ul>
 			<% @projects.each do |project| %>

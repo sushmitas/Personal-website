@@ -16,8 +16,8 @@
 		<ul>
 			<li><%= link_to image_tag("designframe_bw.png", :alt => "Design projects", 
 				:mouseover => "designframe_color.png"), projects_path %></li>
-			<li><%= image_tag("artframe_bw.png", :alt => "Art projects", 
-			:mouseover => "artframe_color.png") %></li>
+			<li><%= link_to image_tag("artframe_bw.png", :alt => "Art projects", 
+			:mouseover => "artframe_color.png"), personals_path %></li>
 			<li><%= link_to image_tag("resumeframe_bw.png", :alt => "Resume",
 			:mouseover => "resumeframe_color.png"), resume_path %></li>
 			<li><%= link_to image_tag("aboutframe_bw.png", :alt => "About me",

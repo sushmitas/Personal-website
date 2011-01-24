@@ -1,8 +1,8 @@
 SushmitaWebsite::Application.routes.draw do
-  resources :personals
 
   root :to => 'pages#home'
-  
+
+  match '/orc_details', 		:to => 'projects#orc_details'  
   resources :projects
   resources :personals
   resources :images
@@ -14,6 +14,7 @@ SushmitaWebsite::Application.routes.draw do
   #match '/signup',					:to => 'users#new'
   match '/signin',					:to => 'sessions#new'
   match '/signout',					:to => 'sessions#destroy'
+
 	
 
   # The priority is based upon order of creation:

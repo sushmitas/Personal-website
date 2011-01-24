@@ -19,14 +19,17 @@ body {
 
 #logo a{
 	color:#333;
+	text-decoration: none;
 }
 
 #logo a.selected{
 	color:#339966;
+	text-decoration: none;
 }
 
-#logo a.hover{
+#logo a:hover{
 	color:#339966;
+	text-decoration: none;
 }
 
 /* Footer */
@@ -59,10 +62,11 @@ a {
 
 a:hover {
 	text-decoration: none;
+	color:#339966;
 }
 
 a:visited {
-  
+  text-decoration: none;
 }
 
 /* Navigation */
@@ -86,6 +90,7 @@ a:visited {
 #nav ul li a {
   font-size: 1.3em;
   color: #333;
+  text-decoration: none;
 }
 
 #nav ul li a:visited {
@@ -99,6 +104,7 @@ a:visited {
 #nav ul li a.selected{
 	color: #339966;
 	font-weight: bold;
+	text-decoration: none;
 }
 
 .selected {
