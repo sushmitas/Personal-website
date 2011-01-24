@@ -84,6 +84,8 @@ a:visited {
 #nav ul li {
   list-style-type: none;
   display: inline-block;
+  * zoom: 1;
+  * display: inline;
   padding: 0 0 0 40px;
 }
 
