@@ -17,10 +17,10 @@ a.sectionheading {
 	 color:#444;
 }
 
-.shortcuts a{
+.shortcuts a, a{
 	color: #444;
 }
-.shortcuts a:hover{
+.shortcuts a:hover, a:hover{
 	color: #339966;
 }
 

@@ -2,7 +2,8 @@ SushmitaWebsite::Application.routes.draw do
 
   root :to => 'pages#home'
 
-  match '/orc_details', 		:to => 'projects#orc_details'  
+  match '/orc_details', 		:to => 'projects#orc_details'
+  match 'commonsense_details', :to => 'projects#commonsense_details'  
   resources :projects
   resources :personals
   resources :images

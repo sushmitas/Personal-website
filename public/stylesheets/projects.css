@@ -79,12 +79,19 @@
   display: inline-block;
   zoom:1;
   *display:inline;
-  border: solid 1px #888;
-
+	line-height:1;
 }
 
-.project_sel_thumb_img a img{
-	border: solid 1px #333;
+
+
+.proj_sel_thumb_img{
+	border: solid 2px #333;
+	margin: 0px;
+	padding: 0px;
+}
+
+.proj_thumb_img{
+	border: solid 1px #888;
 }
 
 .mainimage{
@@ -124,11 +131,13 @@
 .project_list_title{
 	font-size: 1.5em;
 	color: #333;
+	text-decoration: none;
 }
 
 
-.project_list_title a, a:hover {
+.project_list_title a, .project_list_title a:hover {
 	color: #339966;
+	text-decoration: none;
 }
 
 .project_list_description{

@@ -1,6 +1,7 @@
 /* General page setup */
 
 body {
+  padding-top: 10px;
   background: #fff;
   color: #333;
 }
@@ -9,7 +10,7 @@ body {
 
 #header{
 	padding-top: 20px;
-	margin-bottom: 10px;
+	
 	border-bottom:1px solid #333;
 }
 

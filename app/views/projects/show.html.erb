@@ -49,7 +49,7 @@
 					
 					<% if image == @images.first %>
 						<%= link_to image_tag(projectThumbImagePath, 
-										:class => "proj_sel_thumb_img", :title => image_file_name),
+										 :title => image_file_name, :class => "proj_sel_thumb_img"),
 										 "/images/projects/#{@project.imgs_folder_name}/#{image_file_name}", 
 										 :alt => "#{image.caption}" %>
 						
