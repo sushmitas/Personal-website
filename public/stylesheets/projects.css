@@ -85,13 +85,11 @@
 
 
 .proj_sel_thumb_img{
-	border: solid 2px #333;
-	margin: 0px;
-	padding: 0px;
+	border: 2px solid black;
 }
 
 .proj_thumb_img{
-	border: solid 1px #888;
+	border: 1px solid black;
 }
 
 .mainimage{
@@ -99,7 +97,10 @@
 }
 
 #caption{
+
 	font-weight: bold;
+	font-style: italic;
+
 }
 
 
@@ -107,9 +108,11 @@
 /* Project index page */
 #project_list{
 	padding: 0;
+	
 }
 
 #project_list ul{
+	margin: 0 0 0 10px;
 	padding: 0;
 }
 
@@ -120,7 +123,7 @@
 	*display:inline;
 
 	width: 210px;
-	margin: 0 20px 20px 0;
+	margin: 0 10px 20px;
 	vertical-align: top;
 }
 

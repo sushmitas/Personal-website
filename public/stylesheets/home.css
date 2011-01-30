@@ -1,6 +1,8 @@
+
 .intro {
 	margin: 50px 0 0 0;
 	font-size: 1.2em;
+	
 }
 
 .intro a{
@@ -14,7 +16,9 @@
 
 .introemphasis {
 	/*color: #283; */
-	color: #144955;
+	/*color: #144955;*/
+	/*color: #330000;*/
+	/*color: #133E60;*/
 	font-weight: bold;
 	font-size:1.2em;
 	line-height:1;
@@ -23,6 +27,7 @@
 /* Frame pictures */
 #frame{
 	text-align: right;
+	
 }
 
 #frame ul{

@@ -1,11 +1,11 @@
 <div id="header" class="span-24 last">
-	<div id="logo" class="span-8">
-	<% if @menuselect == "Home" %><%= link_to "Sushmita Subramanian", root_path, 
+	<div id="logo" class="span-9">
+	<% if @menuselect == "Home" %><%= link_to image_tag("logo3.png"), root_path, 
 	:class => "selected" %>
-	<% else %><%= link_to "Sushmita Subramanian", root_path %>
+	<% else %><%= link_to image_tag("logo4.png"), root_path %>
 	<% end %>
 	</div>
-	<div id="nav" class="span-16 last">
+	<div id="nav" class="span-15 last" >
 		<ul>
 			<% if @menuselect == "Projects" %>
 			<li><%= link_to "design", projects_path, :class => "selected" %></li>

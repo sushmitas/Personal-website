@@ -4,18 +4,22 @@ body {
   padding-top: 10px;
   background: #fff;
   color: #333;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 /* Header */
 
 #header{
-	padding-top: 20px;
+	padding-top: 0px;
+	border-bottom:1px solid #666;
 	
-	border-bottom:1px solid #333;
 }
 
 #logo{
 	font-size: 1.5em;
+	position: relative;
+	left: 0; top: 15px;
+	
 }
 
 #logo a{
@@ -72,12 +76,14 @@ a:visited {
 
 /* Navigation */
 #nav {
-  white-space: nowrap;
+	padding-top: 45px;
+	vertical-align: bottom;
 	
 }
 
 #nav ul {
-	float: right;
+	/*float: right;*/
+	text-align: right;
   margin: 0;
   padding: 0 14px 0 0;
 }
