@@ -8,8 +8,9 @@
 	background-position: left top;
 	background-repeat: no-repeat; 
 	background-size:100%; 
+	*background-attachment:fixed;
 	
-	*position:absolute;
+	*position:relative;
 	*z-index:-1;
 }
 
