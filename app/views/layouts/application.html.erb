@@ -25,11 +25,13 @@
 			<%= render 'layouts/header' %>
 			
 			<%# Render flash notifications if necessary %>
-			<!--<div class="span-24 last">
+			<% if not flash.empty? %>
+			<div class="span-24 last">
 				<% flash.each do |key, value| %>
 					<div class="flash <%= key %>"><%= value %></div>
 				<% end %>
-			</div>-->
+			</div>
+			<% end %>
 
 			<%# Display the requested page content %>
 			<%= yield %>
