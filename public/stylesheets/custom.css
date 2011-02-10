@@ -19,7 +19,6 @@ body {
 	position: relative;
 	left: 0; 
 	top: 15px;
-	*top: 0;
 }
 
 #logo a{
