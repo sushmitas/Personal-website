@@ -43,7 +43,7 @@
 /* Frame pictures */
 #frame{
 	text-align: right;
-	
+	*height: 148px;
 }
 
 #frame ul{
