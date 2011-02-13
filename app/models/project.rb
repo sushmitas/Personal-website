@@ -24,7 +24,7 @@ class Project < ActiveRecord::Base
 	validates :name,	:presence => true,
 										:uniqueness => { :case_sensitive => false }
 	
-	has_many :images, :dependent => :destroy
+	has_many :images, :as => :imagery, :dependent => :destroy
 	accepts_nested_attributes_for :images, :allow_destroy => :true,
 		:reject_if => :all_blank #proc { |attrs| attrs.all? { |k, v| v.blank?} }
 	

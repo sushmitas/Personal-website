@@ -27,11 +27,11 @@ class PersonalsController < ApplicationController
   # GET /personals/new.xml
   def new
     @personal = Personal.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @personal }
-    end
+		3.times { @personal.images.build }
+#    respond_to do |format|
+#      format.html # new.html.erb
+#      format.xml  { render :xml => @personal }
+#    end
   end
 
   # GET /personals/1/edit

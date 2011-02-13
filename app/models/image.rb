@@ -14,7 +14,7 @@
 
 class Image < ActiveRecord::Base
 	attr_accessible :filename, :caption, :mediatype
-	belongs_to :project
+	belongs_to :imagery, :polymorphic => true
 	
 	validates :filename, :presence => true
 	validates :mediatype, :presence =>true
