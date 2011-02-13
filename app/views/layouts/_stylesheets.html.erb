@@ -7,6 +7,9 @@
 <% if params[:controller] == 'projects' %>
 <%= stylesheet_link_tag 'projects', :media => 'all' %>
 <% end %>
+<% if params[:controller] == 'personals' %>
+<%= stylesheet_link_tag 'personals', :media => 'all' %>
+<% end %>
 <% if @title == 'Resume' %>
 <%= stylesheet_link_tag 'resume', :media => 'all' %>
 <% end %>

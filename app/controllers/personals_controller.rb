@@ -15,12 +15,11 @@ class PersonalsController < ApplicationController
   # GET /personals/1
   # GET /personals/1.xml
   def show
+  		@personals = Personal.all
     @personal = Personal.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @personal }
-    end
+		@images = @personal.images
+		@title = @personal.name
+		@menuselect = "Personal"
   end
 
   # GET /personals/new

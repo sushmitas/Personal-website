@@ -1,21 +1,109 @@
-<p id="notice"><%= notice %></p>
+<a name="top"></a>
+<hr class="space">
 
-<p>
-  <b>Name:</b>
-  <%= @personal.name %>
-</p>
+<div class="span-24 last personal">
 
-<p>
-  <b>Description:</b>
-  <%= @personal.description %>
-</p>
+<div id="personal_area" class="span-22">
 
+	<div class="span-22 last">
+	<%# if administrative user is logged in, display edit/delete link %>
+	<% if current_user and current_user.admin? %>
+	<span class="personal_title"><%= @personal.name %></span>
+		<span class="editlink">
+			<%= link_to "edit/delete", edit_personal_path(@personal), 
+						:title => "Edit " + @personal.name %>
+		</span><br />
+	<% else %>
+	<div class="personal_title"><%= @personal.name %></div>
+	<% end %>
+	</div>
 
-<%= link_to 'Edit', edit_personal_path(@personal) %> |
-<%= link_to 'Back', personals_path %>
+	<hr class="space">
 
+	<div class="span-14">
+		<%= @personal.description %><br />
+	</div>
 
+	<%#------------------------Media ---------------------------------%>
 
+<div class="span-22 last">
+<br />	
+<% unless @personal.images.empty? %>
+	
+	<div id="media">
+	
+		<% if !@images.empty? && @images.count > 1 %>
+			
+			<ul>
+			<% @images.each do |image| %>
+				<% image_file_name = image.filename %>
+				<li>
+					<%personalThumbImagePath = "personal/defaultImages/ThumbImage.png" %>
+					<%	personalThumbImagePath = "personal/#{@personal.imgs_folder_name}/imgthumbs/#{image_file_name}" if not @personal.imgs_folder_name.blank? %>
+					
+					<% if image == @images.first %>
+						<%= link_to image_tag(personalThumbImagePath, 
+										 :title => image_file_name, :class => "pers_thumb_img"),
+										 "/images/personal/#{@personal.imgs_folder_name}/#{image_file_name}", 
+										 :alt => "#{image.caption}" %>
+						
+					<% else %>
+						
+						<%= link_to image_tag(personalThumbImagePath,
+										:class => "pers_thumb_img", :title => image_file_name),
+										"/images/personal/#{@personal.imgs_folder_name}/#{image_file_name}",
+										:class => "activelink", :alt => "#{image.caption}" %>
+					<% end %>
+				</li>
+			<% end %>
+		</ul>
+		
+		<% end %>
+		<div id="placeholder">
+			
+			<% unless @images.empty? %>
+	
+				<div id="caption"><%= @images.first.caption %></div>
+				<%= image_tag("/images/personal/#{@personal.imgs_folder_name}/#{@images.first.filename}", 
+				:class => "mainimage") %>
+				
+			<% end %>
+		</div>
+		<%# end %>
+	
+	</div><% end %>
+	</div>
+	
+	
+</div>
+
+<%#------------------------Project Nav----------------------------%>
+<div class="span-2 last">
+	<div class="personalnav_label"><%= link_to "Artwork", personals_path %></div>
+	<div id="personalnav">
+		<ul>
+			<% @personals.each do |personal| %>
+				<li>
+					<%	thumbImagePath = "personal/defaultImages/ThumbImage.png" %>
+					<%	thumbImagePath = "personal/#{personal.imgs_folder_name}/thumb.png" if not personal.imgs_folder_name.blank? %>
+					<% if personal == @personal %>
+						<%= link_to image_tag(thumbImagePath, :alt => personal.name,
+										:class => "sel_thumb_pers_img", :title => personal.name),
+										 personal %>
+					<% else %>
+						<%= link_to image_tag(thumbImagePath, :alt => personal.name,
+										:class => "thumb_proj_img", :title => personal.name),
+										personal, :class => "activelink" %>
+					<% end %>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+</div>
+
+</div>
+
+<hr class="space">
 
 
 

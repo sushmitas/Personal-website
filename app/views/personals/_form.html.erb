@@ -19,6 +19,18 @@
     <%= f.label :description %><br />
     <%= f.text_field :description %>
   </div>
+  <div class="field">
+			<%= f.label :imgs_folder_name %><br />
+			<%= f.text_field :imgs_folder_name %>
+		</div>
+
+		<hr class="space"
+		<h5>Project images</h5>
+		<%#build some new image entries so that it is possible to add images %>
+		<%= render :partial => 'images/form',
+								:locals => {:form => f} %>
+
+	
   <div class="actions">
     <%= f.submit %>
   </div>
