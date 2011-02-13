@@ -5,7 +5,7 @@ SushmitaWebsite::Application.routes.draw do
   match '/orc_details', 		:to => 'projects#orc_details'
   match 'commonsense_details', :to => 'projects#commonsense_details'  
   resources :projects
-  resources :personals
+  resources :artwork, :controller => 'personals', :as => 'personals'
   resources :images
   resources :users#,					:only => [:show]
   resources :sessions, 			:only => [:new, :create, :destroy]
@@ -15,6 +15,7 @@ SushmitaWebsite::Application.routes.draw do
   #match '/signup',					:to => 'users#new'
   match '/signin',					:to => 'sessions#new'
   match '/signout',					:to => 'sessions#destroy'
+	match '/artwork', 					:to => 'personals#index'
 
 	
 
