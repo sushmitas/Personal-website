@@ -3,6 +3,7 @@ class PersonalsController < ApplicationController
   # GET /personals.xml
   def index
     @personals = Personal.all
+    #@personal = Personal.find(params[:id])
 		@title = "Personal"
 		@menuselect = "Personal"
 

@@ -1,5 +1,31 @@
 
-<% artImagePath = "personal/flowerpainting/painting2.png" %>
-<div class="span-20">
+<%# artImagePath = "personal/flowerpainting/painting2.png" %>
+<%#div class="span-20">
 <%= image_tag(artImagePath, :class => "tempImage") %>
+<%#/div--%>
+
+
+<hr class="space">
+
+<div id="personal_list" class="span-24 last">
+	<ul>
+		<% @personals.each do |personal| %>
+			<li>
+				<% persImagePath = "personal/defaultImages/IndexImage.png" %>
+				<% persImagePath = "personal/#{personal.imgs_folder_name}/FrontImage.png" if not personal.imgs_folder_name.blank? %>
+				
+				<%= link_to image_tag(persImagePath, :alt => personal.name,
+								:class => "personal_list_img", :title => "View " + personal.name),
+								personal %>
+				
+				<%# if administrative user is logged in, display edit/delete link %>
+				<% if current_user and current_user.admin? %>
+				<div class="editlink">
+					<%= link_to "edit/delete", edit_project_path(project), 
+								:title => "Edit " + project.name %>
+				</div>
+				<% end %>
+			</li>
+		<% end %>
+	</ul>
 </div>
