@@ -15,3 +15,6 @@ $(".proj_thumb_img:eq(0)").css({border: '3px solid black'});
     return false;
 });
 });
+
+
+
