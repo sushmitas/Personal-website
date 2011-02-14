@@ -31,27 +31,27 @@
 	<div id="nav" class="span-15 last" >
 		<ul>
 			<% if @menuselect == "Projects" %>
-			<li><%= link_to "design", projects_path, :class => "selected" %></li>
+			<li><%= link_to "design", projects_path, :class => "navlink designlink selected" %></li>
 			<% else %>
-			<li><%= link_to "design", projects_path %></li>
+			<li><%= link_to "design", projects_path, :class => "navlink designlink" %></li>
 			<% end %>
 
 			<% if @menuselect == "Personal" %>
-			<li><%= link_to "art", personals_path, :class => "selected" %></li>
+			<li><%= link_to "art", personals_path, :class => "navlink artlink selected" %></li>
 			<% else %>
-			<li><%= link_to "art", personals_path %></li>
+			<li><%= link_to "art", personals_path, :class => "navlink artlink" %></li>
 			<% end %>
 			
 			<% if @menuselect == "Resume" %>
-			<li><%= link_to "resume", resume_path, :class => "selected" %></li>
+			<li><%= link_to "resume", resume_path, :class => "navlink resumelink selected" %></li>
 			<% else %>
-			<li><%= link_to "resume", resume_path %></li>
+			<li><%= link_to "resume", resume_path, :class => "navlink resumelink" %></li>
 			<% end %>
 			
 			<% if @menuselect == "About" %>
-			<li><%= link_to "about", about_path, :class => "selected" %></li>
+			<li><%= link_to "about", about_path, :class => "navlink aboutlink selected" %></li>
 			<% else %>
-			<li><%= link_to "about", about_path %></li>
+			<li><%= link_to "about", about_path, :class => "navlink aboutlink" %></li>
 			<% end %>
 			
 			

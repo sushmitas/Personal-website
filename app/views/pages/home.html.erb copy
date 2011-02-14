@@ -15,13 +15,13 @@
 	<div id="frame" class="prepend-3 span-10 last">
 		<ul>
 			<li><%= link_to image_tag("home/designframe_bw.png", :alt => "Design projects", 
-				:mouseover => "home/designframe_color.png", :class => "navlink designlink"), projects_path %></li>
+				:mouseover => "home/designframe_color.png"), projects_path %></li>
 			<li><%= link_to image_tag("home/artframe_bw.png", :alt => "Art projects", 
-			:mouseover => "home/artframe_color.png", :class => "navlink artlink"), personals_path %></li>
+			:mouseover => "home/artframe_color.png"), personals_path %></li>
 			<li><%= link_to image_tag("home/resumeframe_bw.png", :alt => "Resume",
-			:mouseover => "home/resumeframe_color.png", :class => "navlink resumelink"), resume_path %></li>
+			:mouseover => "home/resumeframe_color.png"), resume_path %></li>
 			<li><%= link_to image_tag("home/aboutframe_bw.png", :alt => "About me",
-			:mouseover => "home/aboutframe_color.png", :class => "navlink aboutlink"), about_path %></li>
+			:mouseover => "home/aboutframe_color.png"), about_path %></li>
 		</ul>
 	</div>
 
