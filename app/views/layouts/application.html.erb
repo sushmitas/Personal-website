@@ -8,6 +8,7 @@
 		<%= javascript_include_tag 'jquery/jquery-1.4.4.min' %>
 		<%= javascript_include_tag 'images' %>
 		<%= javascript_include_tag 'imagenavlinks' %>
+		<%= javascript_include_tag 'preloadimages' %>
 		<script type="text/javascript">
 			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -19,14 +20,14 @@
 			} catch(err) {}
 
 			//preloading images on the homepage
-			image1 = new Image();
-			image1.src = "/images/home/designframe_color.png";
-			image2 = new Image();
-			image2.src = "/images/home/artframe_color.png";
-			image3 = new Image();
-			image3.src = "/images/home/resumeframe_color.png";
-			image4 = new Image();
-			image4.src = "/images/home/aboutframe_color.png";
+
+			preload([
+				'/images/home/designframe_color.png',
+				'/images/home/artframe_color.png',
+				'/images/home/resumeframe_color.png',
+				'/images/home/aboutframe_color.png'
+			]);
+
 			
 		</script>
 
